@@ -1,8 +1,11 @@
 
 
-  create or replace view `silent-caster-317703`.`dbt_petershi`.`customers`
+  create or replace table `silent-caster-317703`.`dbt_petershi`.`customers`
+  
+  
   OPTIONS()
-  as 
+  as (
+    
 
 with customers as (
     select * from `silent-caster-317703`.`dbt_petershi`.`stg_customers`
@@ -46,5 +49,6 @@ final as (
 
 )
 
-select * from final;
-
+select * from final
+  );
+    
